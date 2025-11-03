@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimensions Master – Info Center</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #3c8ce7, #00eaff);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    p {
+      margin-bottom: 2em;
+      font-size: 1.2em;
+      max-width: 600px;
+    }
+    .button-container {
+      display: flex;
+      gap: 1.5em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    a.button {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      backdrop-filter: blur(5px);
+      transition: 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    a.button:hover {
+      background-color: #fff;
+      color: #0077cc;
+      transform: translateY(-3px);
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dimensions Master</h1>
+  <p>Welcome to the Dimensions Master Information Center.<br>
+     Explore the following sections for details about app policies and usage.</p>
 
+  <div class="button-container">
+    <a class="button" href="Privacy_Policy/">📜 Privacy Policy</a>
+    <a class="button" href="Disclaimer/">⚠️ Disclaimer</a>
+  </div>
+
+  <footer>© 2025 Dimensions Master by Ayman Amin</footer>
+</body>
+</html>
