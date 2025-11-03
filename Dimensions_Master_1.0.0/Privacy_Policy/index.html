@@ -60,7 +60,7 @@
     header img {
       position: relative;
       z-index: 1;
-      height: 110px;
+      height: 110px; /* same as Disclaimer page */
       width: auto;
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -113,8 +113,9 @@
     }
 
     p {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       color: #333;
+      text-align: justify;
     }
 
     strong {
@@ -131,6 +132,11 @@
       font-size: 0.95em;
       letter-spacing: 0.5px;
       border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 25px;
     }
 
     a.button {
@@ -150,21 +156,16 @@
       transform: scale(1.05);
       background: linear-gradient(135deg, #ffc764, #ff7a1a);
     }
-
-    .center {
-      text-align: center;
-      margin-top: 25px;
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-wrapper">
-      <img src="../Logo.png" alt="Dimensions Master Logo">
+      <img src="../logo.png" alt="Dimensions Master Logo">
     </div>
     <div class="header-text">
       <h1>Privacy Policy</h1>
-      <p>How Dimensions Master handles your data and protects your privacy.</p>
+      <p>How Dimensions Master handles your data and ensures your privacy.</p>
     </div>
   </header>
 
@@ -173,47 +174,61 @@
 
     <h2>1. Overview</h2>
     <p>
-      The <strong>Dimensions Master</strong> plugin for AutoCAD is developed by <strong>Ayman Amin</strong>.
-      This privacy policy explains how user information is handled when using the application.
+      The <strong>Dimensions Master</strong> plugin for AutoCAD is developed by <strong>Ayman Amin</strong>.  
+      This privacy policy explains how user information is handled when using the application and complies with Autodesk’s Publisher requirements.
     </p>
 
-    <h2>2. Data Collection</h2>
+    <h2>2. Data Collection and Usage</h2>
     <p>
-      Dimensions Master does <strong>not collect, store, or transmit</strong> any personal information, drawing content, or user data.
-      All operations are performed entirely <strong>within AutoCAD</strong> on the user’s local machine.
+      Dimensions Master does <strong>not collect, store, or transmit</strong> any personal information, user data, or drawing content.  
+      All calculations (such as measuring total lengths of lines, polylines, arcs, and splines) occur entirely <strong>within AutoCAD</strong> on the user's local machine.
+    </p>
+    <p>
+      The plugin does not use analytics, advertising networks, or any online tracking mechanisms.  
+      It performs operations only in memory and does not access, save, or share data externally.
     </p>
 
-    <h2>3. Data Usage</h2>
+    <h2>3. Third-Party Data Sharing</h2>
     <p>
-      The plugin calculates total lengths of drawing elements such as lines, polylines, arcs, and splines.
-      The results are displayed in a local form window inside AutoCAD. 
-      No data is sent or saved externally.
+      Dimensions Master does <strong>not share any data</strong> with third parties, Autodesk, or affiliated entities.  
+      If the plugin ever integrates with a third party in the future, that party will be required to offer the same level of privacy protection as outlined in this policy.
     </p>
 
-    <h2>4. Internet Access</h2>
+    <h2>4. Data Retention and Deletion</h2>
     <p>
-      Dimensions Master does <strong>not require an internet connection</strong> and does not connect to any online services, servers, or APIs.
+      Because the plugin does not collect or store user data, <strong>no retention or deletion actions are required</strong>.  
+      All information processed by the plugin exists temporarily in memory during runtime and is cleared when AutoCAD is closed.
     </p>
 
-    <h2>5. Third-Party Sharing</h2>
+    <h2>5. Revoking Consent and User Control</h2>
     <p>
-      This application does <strong>not share any information</strong> with Autodesk or any third parties.
+      As the plugin does not collect or store data, users do not need to provide consent or manage personal information.  
+      If the plugin’s functionality changes in the future to include data handling, users will be notified and offered an opt-out mechanism.
     </p>
 
-    <h2>6. User Control</h2>
+    <h2>6. Internet Access</h2>
     <p>
-      Since no personal data is collected, users do not need to take any action to protect or manage data within the plugin.
+      Dimensions Master operates entirely offline. It <strong>does not connect to the Internet</strong> or transmit any information to external servers or services.
     </p>
 
-    <h2>7. Updates</h2>
+    <h2>7. Policy Updates</h2>
     <p>
-      If the functionality of the plugin changes in the future in a way that affects privacy, this policy will be updated accordingly.
+      If future versions of Dimensions Master introduce new features involving data usage or connectivity, this policy will be updated accordingly.  
+      Updates will be published at the official privacy policy URL.
     </p>
 
     <h2>8. Contact</h2>
     <p>
-      For feedback or questions about this privacy policy, please contact:<br>
+      For questions or concerns regarding this privacy policy, please contact:<br>
       <strong>Email:</strong> feedback.dimensionsmaster@gmail.com
+    </p>
+
+    <h2>9. Publisher Privacy Policy URL</h2>
+    <p>
+      Official Privacy Policy URL (for Autodesk App Store submission):<br>
+      <a href="https://aymamin.github.io/Dimensions_Master_1.0.0/Privacy_Policy/" target="_blank">
+        https://aymamin.github.io/Dimensions_Master_1.0.0/Privacy_Policy/
+      </a>
     </p>
 
     <div class="center">
