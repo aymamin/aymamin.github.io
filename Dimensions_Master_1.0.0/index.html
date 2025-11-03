@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dimensions Master - AutoCAD Plugin</title>
   <style>
+    /* ---------- GLOBAL STYLES ---------- */
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
@@ -14,8 +15,15 @@
       line-height: 1.6;
       background-attachment: fixed;
       min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ---------- HEADER ---------- */
     header {
       background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(8px);
@@ -31,13 +39,46 @@
       border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     }
 
-    header img {
-      height: 130px;
-      width: auto;
-      flex-shrink: 0;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25));
+    /* ---------- LOGO EFFECT ---------- */
+    .logo-wrapper {
+      position: relative;
+      display: inline-block;
+      animation: slideIn 1.2s ease-out;
     }
 
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 20px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+      filter: blur(15px);
+      z-index: 0;
+    }
+
+    header img {
+      position: relative;
+      z-index: 1;
+      height: 130px;
+      width: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- HEADER TEXT ---------- */
     .header-text {
       max-width: 700px;
     }
@@ -56,6 +97,7 @@
       color: #5a3a07;
     }
 
+    /* ---------- MAIN CARD ---------- */
     main {
       max-width: 950px;
       margin: 50px auto;
@@ -89,6 +131,7 @@
       margin-bottom: 8px;
     }
 
+    /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
       padding: 20px;
@@ -100,6 +143,7 @@
       border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
 
+    /* ---------- BUTTONS ---------- */
     .button-container {
       text-align: center;
       margin-top: 30px;
@@ -126,7 +170,9 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Dimensions Master Logo" />
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="Dimensions Master Logo" />
+    </div>
     <div class="header-text">
       <h1>Dimensions Master</h1>
       <p>
