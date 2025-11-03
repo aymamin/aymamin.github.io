@@ -9,43 +9,62 @@
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f7fb;
+      background: linear-gradient(135deg, #0078d7 0%, #00b7ff 50%, #00d4aa 100%);
       color: #222;
       line-height: 1.6;
+      background-attachment: fixed;
+      min-height: 100vh;
     }
 
     header {
-      background: linear-gradient(135deg, #0078d7, #00aaff);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
       color: white;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
       text-align: center;
-      padding: 50px 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
 
     header img {
-      height: 150px;
-      margin-bottom: 15px;
+      height: 130px;
+      width: auto;
+      flex-shrink: 0;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
     }
 
-    header h1 {
-      font-size: 2.4em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.1em;
-      opacity: 0.9;
+    .header-text {
       max-width: 700px;
+    }
+
+    .header-text h1 {
+      font-size: 2.8em;
+      margin: 0 0 10px 0;
+      letter-spacing: 1px;
+    }
+
+    .header-text p {
+      font-size: 1.1em;
+      opacity: 0.95;
       margin: 0 auto;
     }
 
     main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 30px 25px;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    main:hover {
+      transform: translateY(-4px);
     }
 
     section {
@@ -59,7 +78,7 @@
       margin-bottom: 16px;
     }
 
-    ul {
+    ul, ol {
       padding-left: 20px;
     }
 
@@ -70,9 +89,11 @@
     footer {
       text-align: center;
       padding: 20px;
-      background: #0078d7;
+      background: rgba(0, 0, 0, 0.3);
       color: white;
       margin-top: 40px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
     }
 
     .button-container {
@@ -82,28 +103,33 @@
 
     a.button {
       display: inline-block;
-      background: #00aaff;
+      background: linear-gradient(135deg, #00aaff, #0078d7);
       color: white;
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
+      margin: 0 10px;
+      box-shadow: 0 4px 10px rgba(0, 120, 215, 0.4);
     }
 
     a.button:hover {
-      background: #0078d7;
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #00c6ff, #0078d7);
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="Logo.png" alt="Dimensions Master Logo" />
-    <h1>Dimensions Master</h1>
-    <p>
-      A powerful yet easy-to-use AutoCAD plugin designed to calculate the total
-      length of specified objects in your drawing.
-    </p>
+    <img src="logo.png" alt="Dimensions Master Logo" />
+    <div class="header-text">
+      <h1>Dimensions Master</h1>
+      <p>
+        A powerful yet easy-to-use AutoCAD plugin designed to calculate the total
+        length of specified objects in your drawing.
+      </p>
+    </div>
   </header>
 
   <main>
