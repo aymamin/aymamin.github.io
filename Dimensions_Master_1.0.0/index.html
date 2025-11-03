@@ -1,70 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dimensions Master – Info Center</title>
   <style>
+    /* 🌈 Background & Layout */
     body {
       margin: 0;
-      font-family: "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(135deg, #3c8ce7, #00eaff);
-      color: #fff;
+      height: 100vh;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at 30% 30%, #00d4ff, #0061ff);
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      color: #fff;
       text-align: center;
+      overflow: hidden;
     }
+
+    /* ✨ Animated shapes */
+    .shape {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+    }
+    .shape:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+    .shape:nth-child(2) { bottom: 15%; right: 10%; animation-delay: 2s; }
+    .shape:nth-child(3) { top: 60%; left: 40%; animation-delay: 4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* 🔧 Title */
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 0.2em;
+      letter-spacing: 1px;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
     }
+
+    /* 📏 Subtitle */
     p {
-      margin-bottom: 2em;
       font-size: 1.2em;
       max-width: 600px;
+      margin-bottom: 2em;
+      opacity: 0.9;
     }
-    .button-container {
+
+    /* 🧭 Buttons */
+    .buttons {
       display: flex;
-      gap: 1.5em;
+      gap: 2em;
       flex-wrap: wrap;
       justify-content: center;
     }
+
     a.button {
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 15px 25px;
-      border-radius: 12px;
       text-decoration: none;
-      color: #fff;
+      padding: 15px 25px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ffda79, #ff7eb9);
+      color: #2a2a2a;
       font-weight: 600;
-      backdrop-filter: blur(5px);
-      transition: 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-size: 1.1em;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
+
     a.button:hover {
-      background-color: #fff;
-      color: #0077cc;
-      transform: translateY(-3px);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #fff785, #ff92c2);
     }
+
+    /* 🛠️ Icons (Unicode emoji, works everywhere) */
+    .icon {
+      font-size: 1.3em;
+    }
+
+    /* 🧩 Footer */
     footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 15px;
       font-size: 0.9em;
       opacity: 0.8;
+    }
+
+    /* 💫 Optional subtle glow */
+    h1 span {
+      color: #fff785;
     }
   </style>
 </head>
 <body>
-  <h1>Dimensions Master</h1>
-  <p>Welcome to the Dimensions Master Information Center.<br>
-     Explore the following sections for details about app policies and usage.</p>
+  <!-- Floating shapes -->
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
 
-  <div class="button-container">
-    <a class="button" href="Privacy_Policy/">📜 Privacy Policy</a>
-    <a class="button" href="Disclaimer/">⚠️ Disclaimer</a>
+  <!-- Title -->
+  <h1><span>Dimensions</span> Master</h1>
+  <p>Your essential AutoCAD companion for smart, accurate, and vibrant measurements.</p>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <a href="Privacy_Policy/" class="button"><span class="icon">📜</span> Privacy Policy</a>
+    <a href="Disclaimer/" class="button"><span class="icon">⚠️</span> Disclaimer</a>
   </div>
 
   <footer>© 2025 Dimensions Master by Ayman Amin</footer>
