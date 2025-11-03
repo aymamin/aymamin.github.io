@@ -1,125 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dimensions Master – Info Center</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimensions Master - AutoCAD Plugin</title>
   <style>
-    /* 🌈 Background & Layout */
     body {
+      font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
-      height: 100vh;
-      font-family: 'Poppins', 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at 30% 30%, #00d4ff, #0061ff);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
+      padding: 0;
+      background: #f4f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0078d7, #00aaff);
+      color: white;
       text-align: center;
-      overflow: hidden;
+      padding: 50px 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    /* ✨ Animated shapes */
-    .shape {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      animation: float 10s infinite ease-in-out;
-    }
-    .shape:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-    .shape:nth-child(2) { bottom: 15%; right: 10%; animation-delay: 2s; }
-    .shape:nth-child(3) { top: 60%; left: 40%; animation-delay: 4s; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
+    header img {
+      height: 80px;
+      margin-bottom: 15px;
     }
 
-    /* 🔧 Title */
-    h1 {
-      font-size: 3em;
-      font-weight: 700;
-      margin-bottom: 0.2em;
-      letter-spacing: 1px;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
     }
 
-    /* 📏 Subtitle */
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin-bottom: 2em;
+    header p {
+      font-size: 1.1em;
       opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    /* 🧭 Buttons */
-    .buttons {
-      display: flex;
-      gap: 2em;
-      flex-wrap: wrap;
-      justify-content: center;
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #0078d7;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0078d7;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
     }
 
     a.button {
+      display: inline-block;
+      background: #00aaff;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
       text-decoration: none;
-      padding: 15px 25px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #ffda79, #ff7eb9);
-      color: #2a2a2a;
-      font-weight: 600;
-      font-size: 1.1em;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      border: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
     a.button:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      background: linear-gradient(135deg, #fff785, #ff92c2);
-    }
-
-    /* 🛠️ Icons (Unicode emoji, works everywhere) */
-    .icon {
-      font-size: 1.3em;
-    }
-
-    /* 🧩 Footer */
-    footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.9em;
-      opacity: 0.8;
-    }
-
-    /* 💫 Optional subtle glow */
-    h1 span {
-      color: #fff785;
+      background: #0078d7;
     }
   </style>
 </head>
 <body>
-  <!-- Floating shapes -->
-  <div class="shape"></div>
-  <div class="shape"></div>
-  <div class="shape"></div>
+  <header>
+    <img src="logo.png" alt="Dimensions Master Logo" />
+    <h1>Dimensions Master</h1>
+    <p>
+      A powerful yet easy-to-use AutoCAD plugin designed to calculate the total
+      length of specified objects in your drawing.
+    </p>
+  </header>
 
-  <!-- Title -->
-  <h1><span>Dimensions</span> Master</h1>
-  <p>Your essential AutoCAD companion for smart, accurate, and vibrant measurements.</p>
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        Dimensions Master provides engineers, architects, and designers with quick and
+        accurate length summaries for linear elements such as cables, pipes, boundaries,
+        and utility networks — all displayed clearly in a dedicated results window.
+      </p>
+    </section>
 
-  <!-- Buttons -->
-  <div class="buttons">
-    <a href="Privacy_Policy/" class="button"><span class="icon">📜</span> Privacy Policy</a>
-    <a href="Disclaimer/" class="button"><span class="icon">⚠️</span> Disclaimer</a>
-  </div>
+    <section id="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Instantly calculate the total length of geometry in your AutoCAD drawing.</li>
+        <li>Supports Lines, Polylines, Arcs, and Splines, individually or combined.</li>
+        <li>Choose to include specific layers or all layers.</li>
+        <li>Filter by object color or analyze all colors.</li>
+        <li>Results displayed in a custom form window, with clear values and formatting.</li>
+        <li>Fast, accurate, and user-friendly — ideal for detailed length estimation.</li>
+        <li>Fully compatible with AutoCAD environments used for infrastructure, utilities, and engineering workflows.</li>
+      </ul>
+    </section>
 
-  <footer>© 2025 Dimensions Master by Ayman Amin</footer>
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Open your drawing in AutoCAD.</li>
+        <li>Run the command <strong>DM</strong>.</li>
+        <li>Define which object types to include — lines, polylines, arcs, splines, or any combination.</li>
+        <li>Optionally select a layer or color filter or leave the default value (<em>--All Layers--</em> & <em>--All Colors--</em>).</li>
+        <li>The plugin scans the drawing and displays the total length results in a clear, organized form window, allowing you to review and copy the values easily.</li>
+      </ol>
+    </section>
+
+    <section id="use-cases">
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Estimating pipe, cable, or duct lengths in infrastructure utility networks.</li>
+        <li>Measuring road centerlines, plot boundaries, or paths in civil and architectural layouts.</li>
+      </ul>
+    </section>
+
+    <div class="button-container">
+      <a href="Privacy_Policy/index.html" class="button">Privacy Policy</a>
+      <a href="Disclaimer/index.html" class="button">Disclaimer</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Dimensions Master | Developed by Ayman Amin
+  </footer>
 </body>
 </html>
