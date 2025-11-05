@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for Length Master AutoCAD Plugin by Ayman Amin. Length Master operates entirely offline and collects no user data." />
   <title>Length Master - Privacy Policy</title>
+  <link rel="icon" href="/Length_Master/Assets/Logo.png" type="image/png" />
+
   <style>
     /* ---------- GLOBAL THEME ---------- */
+    :root {
+      --primary: #ff9f1c;
+      --secondary: #ffb347;
+      --accent: #ff8c42;
+      --text-dark: #4b2e05;
+    }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
@@ -27,8 +37,8 @@
     header {
       background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(8px);
-      color: #4b2e05;
-      padding: 40px 20px;
+      color: var(--text-dark);
+      padding: 30px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -60,10 +70,10 @@
     header img {
       position: relative;
       z-index: 1;
-      height: 110px; /* same as Disclaimer page */
+      height: 100px;
       width: auto;
       border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       transition: transform 0.3s ease;
     }
 
@@ -71,29 +81,18 @@
       transform: scale(1.05);
     }
 
-    .header-text {
-      max-width: 700px;
-    }
-
     .header-text h1 {
-      font-size: 2.4em;
-      margin: 0 0 10px 0;
-      color: #4b2e05;
+      font-size: clamp(1.8em, 4vw, 2.4em);
+      margin: 0 0 5px 0;
+      color: var(--text-dark);
       letter-spacing: 0.5px;
-    }
-
-    .header-text p {
-      font-size: 1.05em;
-      color: #5a3a07;
-      opacity: 0.9;
-      margin: 0 auto;
     }
 
     /* ---------- MAIN CONTENT ---------- */
     main {
       max-width: 900px;
-      margin: 50px auto;
-      padding: 30px 25px;
+      margin: 40px auto;
+      padding: 25px;
       background: white;
       border-radius: 18px;
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
@@ -105,35 +104,26 @@
     }
 
     h2 {
-      color: #d36a00;
-      border-bottom: 2px solid #ff9f1c;
+      color: var(--accent);
+      border-bottom: 2px solid var(--primary);
       padding-bottom: 6px;
-      margin-top: 30px;
+      margin-top: 25px;
       margin-bottom: 12px;
+      font-size: 1.3em;
     }
 
     p {
       margin-bottom: 16px;
       color: #333;
       text-align: justify;
+      font-size: 1em;
     }
 
     strong {
       color: #b45309;
     }
 
-    /* ---------- FOOTER ---------- */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.25);
-      color: #4b2e05;
-      margin-top: 40px;
-      font-size: 0.95em;
-      letter-spacing: 0.5px;
-      border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
+    /* ---------- BUTTON & FOOTER ---------- */
     .center {
       text-align: center;
       margin-top: 25px;
@@ -141,90 +131,122 @@
 
     a.button {
       display: inline-block;
-      background: linear-gradient(135deg, #ffb347, #ff8c42);
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
       color: white;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s, transform 0.2s;
       box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     a.button:hover {
       transform: scale(1.05);
       background: linear-gradient(135deg, #ffc764, #ff7a1a);
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.25);
+      color: var(--text-dark);
+      margin-top: 40px;
+      font-size: 0.95em;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      main {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+
+      header {
+        padding: 20px 10px;
+      }
+
+      header img {
+        height: 80px;
+      }
+
+      .header-text h1 {
+        font-size: 1.8em;
+      }
+
+      p {
+        font-size: 0.95em;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
+  <header role="banner">
     <div class="logo-wrapper">
-      <img src="../Assets/Logo.png" alt="Length Master">
+      <img src="/Length_Master/Assets/Logo.png" alt="Length Master Logo" />
     </div>
     <div class="header-text">
       <h1>Privacy Policy</h1>
     </div>
   </header>
 
-  <main>
+  <main role="main">
     <p><strong>Effective Date:</strong> November 2025</p>
 
     <h2>1. Overview</h2>
     <p>
-      The <strong>Length Master</strong> plugin for AutoCAD is developed by <strong>Ayman Amin</strong>.  
-      This privacy policy explains how user information is handled when using the application and complies with Autodesk’s Publisher requirements.
+      The <strong>Length Master</strong> plugin for AutoCAD is developed by <strong>Ayman Amin</strong>.
+      This privacy policy explains how user information is handled and complies with Autodesk’s Publisher requirements.
     </p>
 
     <h2>2. Data Collection and Usage</h2>
     <p>
-      Length Master does <strong>not collect, store, or transmit</strong> any personal information, user data, or drawing content.  
-      All calculations (such as measuring total lengths of lines, polylines, arcs, and splines) occur entirely <strong>within AutoCAD</strong> on the user's local machine.
+      Length Master does <strong>not collect, store, or transmit</strong> any personal information or drawing content.
+      All calculations (such as total lengths of lines, polylines, arcs, and splines) occur entirely <strong>within AutoCAD</strong> on the user’s local machine.
     </p>
     <p>
-      The plugin does not use analytics, advertising networks, or any online tracking mechanisms.  
-      It performs operations only in memory and does not access, save, or share data externally.
+      The plugin does not use analytics, ads, or any tracking mechanisms. All operations run locally in memory without accessing or sharing data externally.
     </p>
 
     <h2>3. Third-Party Data Sharing</h2>
     <p>
-      Length Master does <strong>not share any data</strong> with third parties, Autodesk, or affiliated entities.  
-      If the plugin ever integrates with a third party in the future, that party will be required to offer the same level of privacy protection as outlined in this policy.
+      Length Master does <strong>not share any data</strong> with Autodesk or third parties.
+      If integrations are added in the future, they will follow the same strict privacy standards.
     </p>
 
     <h2>4. Data Retention and Deletion</h2>
     <p>
-      Because the plugin does not collect or store user data, <strong>no retention or deletion actions are required</strong>.  
-      All information processed by the plugin exists temporarily in memory during runtime and is cleared when AutoCAD is closed.
+      No data is stored or retained. All processing happens in memory during runtime and is cleared when AutoCAD closes.
     </p>
 
-    <h2>5. Revoking Consent and User Control</h2>
+    <h2>5. User Control</h2>
     <p>
-      As the plugin does not collect or store data, users do not need to provide consent or manage personal information.  
-      If the plugin’s functionality changes in the future to include data handling, users will be notified and offered an opt-out mechanism.
+      Since no personal data is collected, users don’t need to manage any permissions or settings.
+      If data-handling features are added later, users will be notified and may opt out.
     </p>
 
     <h2>6. Internet Access</h2>
     <p>
-      Length Master operates entirely offline. It <strong>does not connect to the Internet</strong> or transmit any information to external servers or services.
+      Length Master operates fully offline and <strong>never connects to the Internet</strong> or external servers.
     </p>
 
     <h2>7. Policy Updates</h2>
     <p>
-      If future versions of Dimensions Master introduce new features involving data usage or connectivity, this policy will be updated accordingly.  
-      Updates will be published at the official privacy policy URL.
+      If future versions of <strong>Length Master</strong> introduce new features involving connectivity or data usage, this policy will be updated accordingly and republished at the same official URL.
     </p>
 
     <h2>8. Contact</h2>
     <p>
-      For questions or concerns regarding this privacy policy, please contact:<br>
+      For questions about this policy, please contact:<br />
       <strong>Email:</strong> feedback.dimensionsmaster@gmail.com
     </p>
 
-    <h2>9. Publisher Privacy Policy URL</h2>
+    <h2>9. Official Policy URL</h2>
     <p>
-      Official Privacy Policy URL (for Autodesk App Store submission):<br>
+      Official Privacy Policy URL (for Autodesk App Store):<br />
       <a href="https://aymamin.github.io/Length_Master/Privacy_Policy/" target="_blank">
         https://aymamin.github.io/Length_Master/Privacy_Policy/
       </a>
@@ -235,7 +257,7 @@
     </div>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     &copy; 2025 Ayman Amin — Length Master Plugin for AutoCAD
   </footer>
 </body>
