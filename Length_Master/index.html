@@ -30,10 +30,10 @@
       color: #4b2e05;
       padding: 40px 20px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       border-bottom: 2px solid rgba(255, 255, 255, 0.4);
@@ -79,22 +79,33 @@
     }
 
     /* ---------- HEADER TEXT ---------- */
-    .header-text {
-      max-width: 700px;
-    }
-
     .header-text h1 {
       font-size: 2.8em;
-      margin: 0 0 10px 0;
+      margin: 0;
       letter-spacing: 1px;
       color: #4b2e05;
     }
 
-    .header-text p {
-      font-size: 1.1em;
-      opacity: 0.9;
-      margin: 0 auto;
-      color: #5a3a07;
+    /* ---------- HEADER BUTTON ---------- */
+    .header-buttons {
+      margin-top: 10px;
+    }
+
+    a.button {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffb347, #ff8c42);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
+    }
+
+    a.button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ffc764, #ff7a1a);
     }
 
     /* ---------- MAIN CONTENT ---------- */
@@ -179,10 +190,13 @@
 <body>
   <header>
     <div class="logo-wrapper">
-      <img src="Assets/Logo.png" alt="Length Master Logo" />
+      <img src="Logo.png" alt="Length Master Logo" />
     </div>
     <div class="header-text">
       <h1>LENGTH MASTER</h1>
+    </div>
+    <div class="header-buttons">
+      <a href="Privacy_Policy/index.html" class="button">Privacy Policy</a>
     </div>
   </header>
 
