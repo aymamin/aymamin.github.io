@@ -86,21 +86,18 @@
       color: #4b2e05;
     }
 
-    /* ---------- HEADER BUTTON ---------- */
-    .header-buttons {
-      margin-top: 10px;
-    }
-
+    /* ---------- BUTTON STYLE ---------- */
     a.button {
       display: inline-block;
       background: linear-gradient(135deg, #ffb347, #ff8c42);
       color: white;
-      padding: 10px 22px;
+      padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s, transform 0.2s;
       box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
+      margin-top: 20px;
     }
 
     a.button:hover {
@@ -146,18 +143,6 @@
       color: #b45309;
     }
 
-    /* ---------- FOOTER ---------- */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      color: #4b2e05;
-      margin-top: 40px;
-      font-size: 0.95em;
-      letter-spacing: 0.5px;
-      border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
     /* ---------- DISCLAIMER ---------- */
     #disclaimer {
       background: #fffaf3;
@@ -185,18 +170,32 @@
       color: #b45309;
     }
 
+    .center {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #4b2e05;
+      margin-top: 40px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
   </style>
 </head>
 <body>
   <header>
     <div class="logo-wrapper">
-      <img src="Logo.png" alt="Length Master Logo" />
+      <img src="Assets/Logo.png" alt="Length Master Logo" />
     </div>
     <div class="header-text">
       <h1>LENGTH MASTER</h1>
-    </div>
-    <div class="header-buttons">
-      <a href="Privacy_Policy/index.html" class="button">Privacy Policy</a>
     </div>
   </header>
 
@@ -261,6 +260,10 @@
         shall not be held liable for any direct, indirect, or consequential damages arising from its use.
       </p>
     </section>
+
+    <div class="center">
+      <a href="Assets/Privacy_Policy/" class="button">Privacy Policy</a>
+    </div>
   </main>
 
   <footer>
