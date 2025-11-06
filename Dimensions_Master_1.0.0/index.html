@@ -39,7 +39,7 @@
       border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     }
 
-    /* ---------- LOGO EFFECT ---------- */
+    /* ---------- LOGO ---------- */
     .logo-wrapper {
       position: relative;
       display: inline-block;
@@ -97,7 +97,7 @@
       color: #5a3a07;
     }
 
-    /* ---------- MAIN CARD ---------- */
+    /* ---------- MAIN CONTENT ---------- */
     main {
       max-width: 950px;
       margin: 50px auto;
@@ -131,6 +131,10 @@
       margin-bottom: 8px;
     }
 
+    strong {
+      color: #b45309;
+    }
+
     /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
@@ -143,29 +147,33 @@
       border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
 
-    /* ---------- BUTTONS ---------- */
-    .button-container {
-      text-align: center;
-      margin-top: 30px;
+    /* ---------- DISCLAIMER ---------- */
+    #disclaimer {
+      background: #fffaf3;
+      border: 2px solid #ffddab;
+      border-radius: 16px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-top: 60px;
     }
 
-    a.button {
-      display: inline-block;
-      background: linear-gradient(135deg, #ffb347, #ff8c42);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
-      margin: 0 10px;
-      box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
+    #disclaimer h2 {
+      color: #d36a00;
+      border-bottom: 2px solid #ff9f1c;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
     }
 
-    a.button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(135deg, #ffc764, #ff7a1a);
+    #disclaimer p {
+      color: #333;
+      text-align: justify;
+      margin-bottom: 16px;
     }
+
+    #disclaimer strong {
+      color: #b45309;
+    }
+
   </style>
 </head>
 <body>
@@ -224,10 +232,25 @@
       </ul>
     </section>
 
-    <div class="button-container">
-      <a href="Privacy_Policy/index.html" class="button">Privacy Policy</a>
-      <a href="Disclaimer/index.html" class="button">Disclaimer</a>
-    </div>
+    <!-- Disclaimer Section -->
+    <section id="disclaimer">
+      <h2>Disclaimer</h2>
+      <p>
+        This plugin is provided <strong>“as is”</strong> without any warranties, expressed or implied.
+        While every effort has been made to ensure accuracy and reliability, the developer assumes no
+        responsibility for errors, omissions, or incorrect measurements that may occur when using this tool.
+      </p>
+
+      <p>
+        Users are advised to verify all results independently before applying them to design, drafting, or
+        construction work.
+      </p>
+
+      <p>
+        By installing or using this plugin, you acknowledge that you do so at your own risk and that the developer
+        shall not be held liable for any direct, indirect, or consequential damages arising from its use.
+      </p>
+    </section>
   </main>
 
   <footer>
