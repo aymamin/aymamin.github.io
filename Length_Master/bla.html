@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimensions Master - AutoCAD Plugin</title>
+  <style>
+    /* ---------- GLOBAL STYLES ---------- */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #dff6ff 0%, #b8e3ff 50%, #7ec8ff 100%);
+      color: #222;
+      line-height: 1.6;
+      background-attachment: fixed;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      color: #003049;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: left;
+      gap: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    /* ---------- RESPONSIVE HEADER (MOBILE) ---------- */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 25px 10px;
+      }
+
+      .header-text h1 {
+        font-size: 1.6em;
+        line-height: 1.05;
+        margin: 0;
+      }
+
+      header img {
+        height: 85px;
+      }
+    }
+
+    /* ---------- LOGO ---------- */
+    .logo-wrapper {
+      position: relative;
+      display: inline-block;
+      animation: slideIn 1.2s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 20px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+      filter: blur(15px);
+      z-index: 0;
+    }
+
+    header img {
+      position: relative;
+      z-index: 1;
+      height: 105px;
+      width: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- HEADER TEXT ---------- */
+    .header-text {
+      max-width: 600px;
+    }
+
+    .header-text h1 {
+      font-size: 2.1em;
+      margin: 0;
+      letter-spacing: 0.8px;
+      color: #003049;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    /* ---------- BUTTON STYLE ---------- */
+    a.button {
+      display: inline-block;
+      background: linear-gradient(135deg, #0096c7, #0077b6);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      box-s
