@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Length Master - AutoCAD Plugin</title>
+  <style>
+    /* ---------- GLOBAL STYLES ---------- */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffeedb 0%, #ffd6a5 50%, #ffb16c 100%);
+      color: #222;
+      line-height: 1.6;
+      background-attachment: fixed;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      color: #4b2e05;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: left;
+      gap: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    /* ---------- RESPONSIVE HEADER (MOBILE) ---------- */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 25px 10px;
+      }
+
+      .header-text h1 {
+        font-size: 1.6em; /* slightly smaller mobile title */
+        line-height: 1.05;
+        margin: 0;
+      }
+
+      header img {
+        height: 85px;
+      }
+    }
+
+    /* ---------- LOGO ---------- */
+    .logo-wrapper {
+      position: relative;
+      display: inline-block;
+      animation: slideIn 1.2s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 20px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+      filter: blur(15px);
+      z-index: 0;
+    }
+
+    header img {
+      position: relative;
+      z-index: 1;
+      height: 105px;
+      width: auto;
+      border-radius: 0px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- HEADER TEXT ---------- */
+    .header-text {
+      max-width: 600px;
+    }
+
+    .header-text h1 {
+      font-size: 2.1em; /* smaller desktop title */
+      margin: 0;
+      letter-spacing: 0.8px;
+      color: #4b2e05;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    /* ---------- BUTTON STYLE ---------- */
+    a.button {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffb347, #ff8c42);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
+      margin-top: 20px;
+    }
+
+    a.button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ffc764, #ff7a1a);
+    }
+
+    /* ---------- MAIN CONTENT ---------- */
+    main {
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 30px 25px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+
+    main:hover {
+      transform: translateY(-4px);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #d36a00;
+      border-bottom: 2px solid #ff9f1c;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: #b45309;
+    }
+
+    /* ---------- DISCLAIMER ---------- */
+    #disclaimer {
+      background: #fffaf3;
+      border: 2px solid #ffddab;
+      border-radius: 16px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-top: 60px;
+    }
+
+    #disclaimer h2 {
+      color: #d36a00;
+      border-bottom: 2px solid #ff9f1c;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    #disclaimer p {
+      color: #333;
+      text-align: justify;
+      margin-bottom: 16px;
+    }
+
+    #disclaimer strong {
+      color: #b45309;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #4b2e05;
+      margin-top: 40px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-wrapper">
+      <img src="Assets/Logo.png" alt="Length Master Logo" />
+    </div>
+    <div class="header-text">
+      <h1>LENGTH MASTER</h1>
+    </div>
+  </header>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        <strong>Length Master</strong> is a powerful yet easy-to-use AutoCAD plugin designed to calculate the total length of specified objects in your drawing.
+      </p>
+      <p>
+        It provides engineers, architects, and designers with quick and accurate length summaries for linear elements such as cables, pipes, boundaries, and utility networks — all displayed clearly in a dedicated results window.
+      </p>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Instantly calculate the total length of geometry in your AutoCAD drawing.</li>
+        <li>Supports Lines, Polylines, Arcs, and Splines, individually or combined.</li>
+        <li>Choose to include specific layers or all layers.</li>
+        <li>Filter by object color or analyze all colors.</li>
+        <li>Results are displayed in a custom form window, with clear values and formatting.</li>
+        <li>Fast, accurate, and user-friendly — ideal for detailed length estimation.</li>
+        <li>Fully compatible with AutoCAD environments used for infrastructure, utilities, and engineering workflows.</li>
+      </ul>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Open your drawing in AutoCAD.</li>
+        <li>Run the command <strong>LMR</strong> or simply press "Length Master" icon in Add-ins tab.</li>
+        <li>Define which object types to include — lines, polylines, arcs, splines, or any combination.</li>
+        <li>Optionally select a layer or color filter or leave the default value (<em>--All Layers--</em> & <em>--All Colors--</em>).</li>
+        <li>The plugin scans the drawing and displays the total length results in a clear, organized form window, allowing you to review and copy the values easily.</li>
+      </ol>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use-cases">
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Estimating pipe, cable, or duct lengths in infrastructure utility networks.</li>
+        <li>Measuring road centerlines, plot boundaries, or paths in civil and architectural layouts.</li>
+        <li>Summing profile or cut lengths in mechanical and MEP designs.</li>
+        <li>Checking curve and spline lengths in freeform geometry or concept models.</li>
+        <li>Producing quick material take-offs and length summaries for reports or costing.</li>
+      </ul>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section id="disclaimer">
+      <h2>Disclaimer</h2>
+      <p>
+        This plugin is provided <strong>“as is”</strong> without any warranties, expressed or implied.
+        While every effort has been made to ensure accuracy and reliability, the developer assumes no
+        responsibility for errors, omissions, or incorrect measurements that may occur when using this tool.
+      </p>
+
+      <p>
+        Users are advised to verify all results independently before applying them to design, drafting, or
+        construction work.
+      </p>
+
+      <p>
+        By installing or using this plugin, you acknowledge that you do so at your own risk and that the developer
+        shall not be held liable for any direct, indirect, or consequential damages arising from its use.
+      </p>
+    </section>
+
+    <div class="center">
+      <a href="Assets/Privacy_Policy/" class="button">Privacy Policy</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Length Master | Developed by AYMAMIN
+  </footer>
+</body>
+</html>
