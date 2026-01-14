@@ -114,6 +114,175 @@
             background-color: #1e3c72;
         }
 
+        .btn-buy {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-buy:hover {
+            background-color: #1e7e34;
+        }
+
+        .btn-trial {
+            background-color: #ffc107;
+            color: #333;
+        }
+
+        .btn-trial:hover {
+            background-color: #e0a800;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AYMAMIN CAD PLUGINS</h1>
+    <p>Professional AutoCAD tools for precision, speed, and clarity</p>
+</header>
+
+<main>
+
+    <section class="plugins-grid">
+
+        <!-- Length Master -->
+        <div class="plugin-card">
+            <div class="plugin-logo">
+                <img src="Length_Master/Assets/Logo.png" alt="Length Master Logo">
+            </div>
+            <div class="plugin-content">
+                <h2>Length Master</h2>
+                <p>
+                    Calculate total lengths of selected AutoCAD entities with high
+                    accuracy. Ideal for cables, pipelines, ducts, and infrastructure
+                    networks without modifying the drawing.
+                </p>
+            </div>
+            <div class="plugin-actions">
+                <a href="#" class="btn-primary">Learn More</a>
+                <a href="#" class="btn-buy">Buy Full Version</a>
+                <a href="#" class="btn-trial">Download Free Trial</a>
+            </div>
+        </div>
+
+        <!-- Coordinates Master -->
+        <div class="plugin-card">
+            <div class="plugin-logo">
+                <img src="Coordinates_Master/Assets/Logo.png" alt="Coordinates Master Logo">
+            </div>
+            <div class="plugin-content">
+                <h2>Coordinates Master</h2>
+                <p>
+                    Extract precise coordinates and generate professional tables
+                    with leaders pointing directly to entities. Designed for survey,
+                    documentation, and QA workflows.
+                </p>
+            </div>
+            <div class="plugin-actions">
+                <a href="#" class="btn-primary">Learn More</a>
+                <a href="#" class="btn-buy">Buy Full Version</a>
+                <a href="#" class="btn-trial">Download Free Trial</a>
+            </div>
+        </div>
+
+        <!-- Future plugins go here -->
+
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Ayman Amin — AYMAMIN CAD PLUGINS
+</footer>
+
+</body>
+</html>
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .plugins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .plugin-card {
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .plugin-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .plugin-logo {
+            height: 170px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plugin-logo img {
+            max-height: 120px;
+            max-width: 80%;
+            object-fit: contain;
+        }
+
+        .plugin-content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .plugin-content h2 {
+            margin: 0 0 10px;
+            font-size: 1.4em;
+        }
+
+        .plugin-content p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .plugin-actions {
+            padding: 15px 20px 22px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .plugin-actions a {
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: #2a5298;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e3c72;
+        }
+
         .btn-secondary {
             background-color: #e0e0e0;
             color: #333;
