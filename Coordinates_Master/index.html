@@ -218,10 +218,10 @@
 <body>
   <header>
     <div class="logo-wrapper">
-      <img src="Assets/Logo.png" alt="Length Master Logo" />
+      <img src="Assets/Logo.png" alt="Coordinates Master Logo" />
     </div>
     <div class="header-text">
-      <h1>LENGTH MASTER</h1>
+      <h1>COORDINATES MASTER</h1>
     </div>
   </header>
 
@@ -230,10 +230,10 @@
     <section id="overview">
       <h2>Overview</h2>
       <p>
-        <strong>Length Master</strong> is a powerful yet easy-to-use AutoCAD plugin designed to calculate the total length of specified objects in your drawing.
+        <strong>Length Master</strong> is a powerful yet easy-to-use AutoCAD plugin designed to automatically generate and plot coordinates tables from drawing objects.
       </p>
       <p>
-        It provides engineers, architects, and designers with quick and accurate length summaries for linear elements such as cables, pipes, boundaries, and utility networks — all displayed clearly in a dedicated results window.
+        It provides engineers, architects, and designers with quick and accurate coordinate data for Blocks, Points, or both, clearly organized in a professional table with leaders linking each object to its corresponding coordinates.
       </p>
     </section>
 
@@ -241,13 +241,14 @@
     <section id="features">
       <h2>Key Features</h2>
       <ul>
-        <li>Instantly calculate the total length of geometry in your AutoCAD drawing.</li>
-        <li>Supports Lines, Polylines, Arcs, and Splines, individually or combined.</li>
-        <li>Choose to include specific layers or all layers.</li>
-        <li>Filter by object color or analyze all colors.</li>
-        <li>Results are displayed in a custom form window, with clear values and formatting.</li>
-        <li>Fast, accurate, and user-friendly — ideal for detailed length estimation.</li>
-        <li>Fully compatible with AutoCAD environments used for infrastructure, utilities, and engineering workflows.</li>
+        <li>Instantly creates tables of coordinates with leaders pointing to drawing objects.</li>
+        <li>Supports Blocks and Points, individually or combined.</li>
+        <li>Filter Blocks by block name, layer, color, or any combination.</li>
+        <li>Filter Points by layer, color, or both.</li>
+        <li>Full control over leader geometry, including length, angle, arrow size, and layer.</li>
+        <li>Customize table properties such as table layer, text style, and coordinate labels, with full control over which coordinates (X, Y, Z) are displayed.</li>
+        <li>Fast, accurate, and user-friendly — ideal for precise coordinate documentation.</li>
+        <li>Fully compatible with AutoCAD environments used for surveying, infrastructure, and engineering workflows.</li>
       </ul>
     </section>
 
@@ -256,10 +257,12 @@
       <h2>How It Works</h2>
       <ol>
         <li>Open your drawing in AutoCAD.</li>
-        <li>Run the command <strong>LMR</strong> or simply press "Length Master" icon in Add-ins tab.</li>
-        <li>Define which object types to include — lines, polylines, arcs, splines, or any combination.</li>
-        <li>Optionally select a layer or color filter or leave the default value (<em>--All Layers--</em> & <em>--All Colors--</em>).</li>
-        <li>The plugin scans the drawing and displays the total length results in a clear, organized form window, allowing you to review and copy the values easily.</li>
+        <li>Run the command CMR in command line or simply press “Coordinates Master” icon in Add-ins tab.</li>
+        <li>Choose the object type to include — Blocks, Points, or both.</li>
+        <li>Apply filters such as block name, layer, or color, or leave default values (<em>--All Layers--</em> & <em>--All Colors--</em>).</li>
+        <li>Configure leader geometry and table settings as needed.</li>
+        <li>The plugin generates a clear, organized coordinates table with leaders pointing to each selected object.</li>
+        <li>Output screen displays number of blocks and/or points processed successfully.</li>
       </ol>
     </section>
 
@@ -267,11 +270,11 @@
     <section id="use-cases">
       <h2>Use Cases</h2>
       <ul>
-        <li>Estimating pipe, cable, or duct lengths in infrastructure utility networks.</li>
-        <li>Measuring road centerlines, plot boundaries, or paths in civil and architectural layouts.</li>
-        <li>Summing profile or cut lengths in mechanical and MEP designs.</li>
-        <li>Checking curve and spline lengths in freeform geometry or concept models.</li>
-        <li>Producing quick material take-offs and length summaries for reports or costing.</li>
+        <li>Documenting block and point locations in civil, architectural, and infrastructure projects.</li>
+        <li>Generating accurate coordinate schedules for construction set-out and field execution.</li>
+        <li>Extracting coordinates for utility networks, equipment layouts, and control points.</li>
+        <li>Preparing clear coordinate references for shop drawings, approval drawings, and as-built documentation.</li>
+        <li>Reducing manual errors and saving time when coordinating design data with surveyors and site teams.</li>
       </ul>
     </section>
 
@@ -301,7 +304,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Length Master | Developed by AYMAMIN
+    &copy; 2026 Coordinates Master | Developed by AYMAMIN
   </footer>
 </body>
 </html>
