@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ayman CAD Plugins</title>
+    <title>AYMAMIN CAD PLUGINS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -16,17 +16,18 @@
         header {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            padding: 40px 20px;
+            padding: 45px 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.6em;
+            letter-spacing: 1px;
         }
 
         header p {
-            margin-top: 10px;
+            margin-top: 12px;
             font-size: 1.1em;
             opacity: 0.9;
         }
@@ -45,7 +46,7 @@
 
         .plugin-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 14px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
             overflow: hidden;
             display: flex;
@@ -54,19 +55,22 @@
         }
 
         .plugin-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
         }
 
-        .plugin-image {
-            background-color: #eaeaea;
-            height: 160px;
+        .plugin-logo {
+            height: 170px;
+            background-color: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            color: #777;
-            font-size: 1.1em;
+        }
+
+        .plugin-logo img {
+            max-height: 120px;
+            max-width: 80%;
+            object-fit: contain;
         }
 
         .plugin-content {
@@ -86,7 +90,7 @@
         }
 
         .plugin-actions {
-            padding: 15px 20px 20px;
+            padding: 15px 20px 22px;
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
@@ -94,7 +98,7 @@
 
         .plugin-actions a {
             text-decoration: none;
-            padding: 10px 14px;
+            padding: 10px 16px;
             border-radius: 8px;
             font-size: 0.9em;
             font-weight: bold;
@@ -103,88 +107,4 @@
 
         .btn-primary {
             background-color: #2a5298;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #1e3c72;
-        }
-
-        .btn-secondary {
-            background-color: #e0e0e0;
-            color: #333;
-        }
-
-        .btn-secondary:hover {
-            background-color: #cfcfcf;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 15px;
-            color: #777;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Ayman CAD Plugins</h1>
-    <p>Professional AutoCAD tools designed for productivity and precision</p>
-</header>
-
-<main>
-
-    <section class="plugins-grid">
-
-        <!-- Length Master -->
-        <div class="plugin-card">
-            <div class="plugin-image">
-                Length Master
-            </div>
-            <div class="plugin-content">
-                <h2>Length Master</h2>
-                <p>
-                    Instantly calculate total lengths of selected AutoCAD entities.
-                    Ideal for cables, pipelines, ducts, and infrastructure networks.
-                    Accurate, fast, and non-destructive.
-                </p>
-            </div>
-            <div class="plugin-actions">
-                <a href="#" class="btn-primary">Learn More</a>
-                <a href="#" class="btn-secondary">Download</a>
-            </div>
-        </div>
-
-        <!-- Coordinates Master -->
-        <div class="plugin-card">
-            <div class="plugin-image">
-                Coordinates Master
-            </div>
-            <div class="plugin-content">
-                <h2>Coordinates Master</h2>
-                <p>
-                    Extract coordinates from drawing entities and generate
-                    professional tables with leaders pointing directly to objects.
-                    Perfect for survey and documentation workflows.
-                </p>
-            </div>
-            <div class="plugin-actions">
-                <a href="#" class="btn-primary">Learn More</a>
-                <a href="#" class="btn-secondary">Download</a>
-            </div>
-        </div>
-
-        <!-- Future plugins go here -->
-
-    </section>
-
-</main>
-
-<footer>
-    © 2026 Ayman Amin — AutoCAD Plugins
-</footer>
-
-</body>
-</html>
+            color: whi
